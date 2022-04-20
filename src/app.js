@@ -1,35 +1,19 @@
-function formatDate(timestamp){
-let date = new Date(timestamp);
-let minutes = now.getMinutes();
-let hours = now.getHours();
-let days = [
-"Sunday",
-"Monday",
-"Tuesday",
-"Wednesday",
-"Thursday",
-"Friday",
-"Saturday"
-];
-let day = days[date.getDay()];
-return `${day} ${hours}:${minutes}`; 
-}
-
-function formatDay(timestamp){
-    let date = new Date(timestamp * 1000);
-    let day = date.getDay();
+function formatDate(timestamp) {
+    let date = new Date(timestamp);
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
     let days = [
-        "Sunday",
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday"
-        ];
-        return days[day];
-}
-
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
+    let day = days[date.getDay()];
+    return `${day} ${hours}:${minutes}`;
+  }
 
 function displayTemp(response){
     temperatureCelsius = response.data.main.temp;
