@@ -61,3 +61,12 @@ li:first-letter{
   .specifics{
       margin-top: 20px;
   }
+
+  .weather-temperature .active {
+color: black;
+cursor: default;
+  }
+
+  .weather-temperature .active:hover {
+    text-decoration: none;
+      }
