@@ -15,7 +15,8 @@ function formatDate(timestamp) {
     return `${day} ${hours}:${minutes}`;
   }
 
-  function displayForecast(){
+  function displayForecast(response){
+    console.log(response.data.daily);
     let forecastElement = document.querySelector(`#weather-forecast`);
     let forecastHTML = `<div class="row">`; 
     let days = ["Wed", "Thu" ,"Fri", "Sat", "Sun"];
@@ -39,6 +40,13 @@ function formatDate(timestamp) {
     });
 forecastHTML = forecastHTML + `</div>`;
 forecastElement.innerHTML = forecastHTML;
+  }
+
+  function getForecast(coordinates){
+    console.log(coordinates);
+    let apiKey = "a4dfa5a448f82badff3625201cc77dc9";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
   }
 
 function displayTemp(response){
@@ -65,6 +73,8 @@ function displayTemp(response){
     let iconElement = document.querySelector(`#icon`);
     iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
     iconElement.setAttribute("alt", response.data.weather[0].description);
+
+getForecast(response.data.coord);
   };
 
 function search(city){
@@ -100,7 +110,6 @@ let form = document.querySelector(`#search-form`);
 form.addEventListener("submit", handleSubmit);
 
 search("Vienna");
-displayForecast();
 
 let fahrenheitLink = document.querySelector(`#fahrenheit-link`);
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
