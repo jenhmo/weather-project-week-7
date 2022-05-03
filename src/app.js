@@ -15,6 +15,32 @@ function formatDate(timestamp) {
     return `${day} ${hours}:${minutes}`;
   }
 
+  function displayForecast(){
+    let forecastElement = document.querySelector(`#weather-forecast`);
+    let forecastHTML = `<div class="row">`; 
+    let days = ["Wed", "Thu" ,"Fri", "Sat", "Sun"];
+    days.forEach(function(day) {
+      forecastHTML = 
+      forecastHTML + 
+      `<div class="col-2">
+          <div class="weather-forecast-date">
+          ${day}
+      </div>
+          <img src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png" alt="" width="40" />
+         <div class="weather-forecast-temperatures"> 
+             <span class="weather-forecast-temperatures-max">
+                 18˚
+             </span> 
+             <span class="weather-forecast-temperatures-min"> 
+                 12˚
+               </span>
+           </div>
+      </div>`;
+    });
+forecastHTML = forecastHTML + `</div>`;
+forecastElement.innerHTML = forecastHTML;
+  }
+
 function displayTemp(response){
     temperatureCelsius = response.data.main.temp;
 
@@ -74,6 +100,7 @@ let form = document.querySelector(`#search-form`);
 form.addEventListener("submit", handleSubmit);
 
 search("Vienna");
+displayForecast();
 
 let fahrenheitLink = document.querySelector(`#fahrenheit-link`);
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
