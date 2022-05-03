@@ -70,3 +70,19 @@ cursor: default;
   .weather-temperature .active:hover {
     text-decoration: none;
       }
+
+.weather-forecast {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.weather-forecast-date {
+    font: 16px;
+}
+.weather-forecast-temperatures{
+    font-size: 14px;
+}
+
+.weather-forecast-temperatures-min{
+    color:rgb(32, 32, 253);
+}
