@@ -4,12 +4,13 @@ body{
 
 h1{
     margin-bottom: 0;
+    color:rgb(37, 37, 127);
 }
 
 ul{
     list-style: none;
     padding-inline-start: 5px;
-    color: rgb(105, 105, 129);
+    color: rgb(111, 111, 186);
 }
 
 li{
@@ -20,9 +21,14 @@ li{
     font-weight: 100;
 }
 
+.units {
+    color:rgb(37, 37, 127);
+}
+
 #temperature {
     font-size: 60px;
     font-weight: 400;
+    color:rgb(37, 37, 127);
 }
 
 .row{
@@ -30,7 +36,7 @@ li{
 }
 
 #me {
-    color: rgb(105, 105, 129);
+    color:rgb(37, 37, 127);
 }
 
 li:first-letter{
@@ -78,11 +84,16 @@ cursor: default;
 
 .weather-forecast-date {
     font: 16px;
+    color:rgb(37, 37, 127);
 }
 .weather-forecast-temperatures{
     font-size: 14px;
 }
 
+.weather-forecast-temperatures-max{
+    color:rgb(37, 37, 127);
+}
+
 .weather-forecast-temperatures-min{
-    color:rgb(32, 32, 253);
+    color: rgb(111, 111, 186);
 }
