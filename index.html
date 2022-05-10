@@ -35,10 +35,21 @@
            </form>
            <div class="overview">
 <h1 id="city"></h1>
-<ul>
-    <li><span id="date"></li>
-    <li id="description"></li>
-</ul>
+<div class="row">
+<div class="col-6">
+    <ul>
+        <li><span id="date"></li>
+        <li id="description"></li>
+    </ul>
+    </div>
+    <div class="col-6">
+        <ul>
+            <li>Humidity: <span id="humidity"></span>%</li>
+            <li>Wind: <spain id="wind"></spain> km/h</li>
+        </ul>
+    </div>
+</div>
+</div>
 <div class="row">
     <div class="col-6">
         <div class="clearfix weather-temperature">
@@ -48,16 +59,8 @@
         </div>
     </div>
     </div>
-    <div class="col-6 specifics">
-        <ul>
-            <li>Humidity: <span id="humidity"></span>%</li>
-            <li>Wind: <spain id="wind"></spain> km/h</li>
-        </ul>
-    </div>
 </div>
 <div class="weather-forecast" id="weather-forecast">
-</div>
-</div>
 </div>
 <small>
     <a href="https://github.com/jenhmo/Weather-Project-Week-7" target="_blank"> Open-source code</a>
