@@ -21,11 +21,6 @@ li{
     font-weight: 100;
 }
 
-#date-specifics{
-    display: flex;
-    justify-content: flex-end;
-}
-
 .units {
     color:rgb(37, 37, 127);
 }
@@ -83,7 +78,7 @@ cursor: default;
       }
 
 .weather-forecast {
-    margin-top: 20px;
+    margin-top: 80px;
     text-align: center;
 }
 
